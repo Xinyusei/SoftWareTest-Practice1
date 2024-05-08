@@ -30,6 +30,7 @@ public class BaggageController {
      */
     @PostMapping("/sum")
     public String sum(@RequestBody Passenger passenger){
+        //TODO 参数提前校验
         System.out.println("---------------------------------------------");
         log.info("passenger{}",passenger.toString());
         Double sum = baggageService.sum(passenger);
